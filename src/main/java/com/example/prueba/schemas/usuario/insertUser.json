@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "nombres": {
+      "type": "string",
+      "minLength": 2
+    },
+    "apellidos": {
+      "type": "string",
+      "minLength": 2
+    },
+    "identificacion": {
+      "type": "string",
+      "pattern": "^[0-9]+$"
+    },
+    "fecha_nacimiento": {
+      "type": "string",
+      "format": "date"
+    },
+    "user_name": {
+      "type": "string",
+      "minLength": 4
+    },
+    "password": {
+      "type": "string",
+      "minLength": 8
+    }
+  },
+  "required": ["nombres", "apellidos", "identificacion", "fecha_nacimiento", "user_name", "password"]
+}
