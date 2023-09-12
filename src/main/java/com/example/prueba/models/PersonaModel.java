@@ -1,5 +1,8 @@
 package com.example.prueba.models;
 
+
+import java.util.Date;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -12,7 +15,8 @@ public class PersonaModel {
     private String nombres;
     private String apellidos;
     private String identificacion;
-    private String fecha_nacimiento;
+    private Date fecha_nacimiento;
+    private Boolean status;
 
     public Integer getId_persona() {
         return id_persona;
@@ -46,11 +50,19 @@ public class PersonaModel {
         this.identificacion = identificacion;
     }
 
-    public String getFecha_nacimiento() {
+    public Date getFecha_nacimiento() {
         return fecha_nacimiento;
     }
 
-    public void setFecha_nacimiento(String fecha_nacimiento) {
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 }
